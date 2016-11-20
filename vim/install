@@ -1,0 +1,11 @@
+# Install vim
+eval $PACKET install vim
+
+# Copy config
+cp vim/.vimrc ~/.vimrc
+
+# Install vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Install Plugins
+vim +PluginInstall +qall

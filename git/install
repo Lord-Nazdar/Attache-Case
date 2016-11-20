@@ -1,0 +1,12 @@
+# Install Git
+eval $PACKET install git
+
+# Copy git config
+cp git/.gitconfig ~/.gitconfig
+
+# Config user and email
+read -p "Enter git name:" name
+git config --global user.name $name
+
+read -p "Enter git email:" email
+git config --global user.email $email
